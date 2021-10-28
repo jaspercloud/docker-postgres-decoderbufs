@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t postgres-decoderbufs .
+docker build -t 276726581/postgres-decoderbufs:9.6 .
 

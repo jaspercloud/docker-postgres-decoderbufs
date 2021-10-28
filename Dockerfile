@@ -43,6 +43,13 @@ RUN cd /tmp \
 && make \
 && make install
 
+COPY ./wal2json.tar.gz /tmp/
+RUN cd /tmp \
+&& tar -xvf wal2json.tar.gz \
+&& cd /tmp/wal2json \
+&& make \
+&& make install
+
 RUN adduser postgres \
 && mkdir /var/lib/postgresql \
 && chown -R postgres:postgres /var/lib/postgresql
